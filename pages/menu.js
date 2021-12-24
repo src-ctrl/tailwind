@@ -7,9 +7,10 @@ export default function Example() {
 
 
     return (
-        <><button onClick={() => setIsShowing((isShowing) => !isShowing)}>
-            Toggle
-        </button>
+        <>
+            <button onClick={() => setIsShowing((isShowing) => !isShowing)}>
+                Toggle
+            </button>
             <Transition show={isShowing}>
                 {/* Background overlay */}
                 <Transition.Child
@@ -36,7 +37,7 @@ export default function Example() {
                     leaveTo="-translate-x-full"
                 >
                     {/* The sidebar */}
-                    <div class="w-80 overflow-hidden">
+                    <div className="w-80 overflow-hidden">
                         <Transition
                             show={!subShowing}
                             className="fixed top-0 left-0 bg-white w-80 h-full"
@@ -87,6 +88,33 @@ export default function Example() {
                         </Transition>
                     </div>
                 </Transition.Child>
-            </Transition></>
+            </Transition>
+            <div className="flex flex-wrap box-border">
+                <div className="w-1/2 p-3">
+                    <img src="/img/22809045-1-black.webp" />
+                    <h2>Silver Street chunky boat shoes in black leather</h2>
+                    RRP £80.00
+                    £24.00
+                </div>
+                <div className="w-1/2 p-3">
+                    <img src="/img/22557428-1-white.webp" />
+                    <h2>Silver Street chunky boat shoes in black leather</h2>
+                    RRP £80.00
+                    £24.00
+                </div>
+                <div className="w-1/2 p-3">
+                    <img src="/img/23968083-1-green.webp" />
+                    <h2>Silver Street chunky boat shoes in black leather</h2>
+                    RRP £80.00
+                    £24.00
+                </div>
+                <div className="w-1/2 p-3">
+                    <img src="/img/23968070-1-multi.webp" />
+                    <h2>Silver Street chunky boat shoes in black leather</h2>
+                    RRP £80.00
+                    £24.00
+                </div>
+            </div>
+        </>
     )
 }
