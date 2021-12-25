@@ -89,26 +89,26 @@ export default function Example() {
                     </div>
                 </Transition.Child>
             </Transition>
-            <div className="flex flex-wrap box-border">
-                <div className="w-1/2 p-3">
+            <div className="flex flex-wrap box-border p-1.5">
+                <div className="w-1/2 p-1.5">
                     <img src="/img/22809045-1-black.webp" />
                     <h2>Silver Street chunky boat shoes in black leather</h2>
                     RRP £80.00
                     £24.00
                 </div>
-                <div className="w-1/2 p-3">
+                <div className="w-1/2 p-1.5">
                     <img src="/img/22557428-1-white.webp" />
                     <h2>Silver Street chunky boat shoes in black leather</h2>
                     RRP £80.00
                     £24.00
                 </div>
-                <div className="w-1/2 p-3">
+                <div className="w-1/2 p-1.5">
                     <img src="/img/23968083-1-green.webp" />
                     <h2>Silver Street chunky boat shoes in black leather</h2>
                     RRP £80.00
                     £24.00
                 </div>
-                <div className="w-1/2 p-3">
+                <div className="w-1/2 p-1.5">
                     <img src="/img/23968070-1-multi.webp" />
                     <h2>Silver Street chunky boat shoes in black leather</h2>
                     RRP £80.00
