@@ -5,6 +5,32 @@ export default function Example() {
     let [isShowing, setIsShowing] = useState(false)
     let [subShowing, setSubShowing] = useState(false)
 
+    const menuItems = [
+        {
+            img: "/img/pinksale_container_2292x762.webp"
+        },
+        {
+            img: "/img/mw_brands_designer_1M_1958418.webp"
+        },
+        {
+            img: "/img/mw_gbl_clothing_clothing_103414054_1m.webp"
+        },
+        {
+            img: "/img/mw_gbl_accessories_accessories_2007911_1m.webp"
+        },
+        {
+            img: "/img/mw_gbl_newin_newin_2017282_1m.webp"
+        },
+        {
+            img: "/img/mw_gbl_shoes_shoes_1904625_1m.webp"
+        },
+        {
+            img: "/img/mw_gbl_topman_topman_104173502_1m.webp"
+        },
+        {
+            img: "/img/mw_toplevel_gifting_1m_1763482.webp"
+        }
+    ]
 
     return (
         <>
@@ -40,7 +66,7 @@ export default function Example() {
                     <div className="w-80 overflow-hidden">
                         <Transition
                             show={!subShowing}
-                            className="fixed top-0 left-0 bg-white w-80 h-full"
+                            className="fixed top-0 left-0 bg-white w-80 h-full px-4"
                             enter="transition ease-in-out duration-1000 transform"
                             enterFrom="-translate-x-full"
                             enterTo="translate-x-0"
@@ -48,22 +74,14 @@ export default function Example() {
                             leaveFrom="translate-x-0"
                             leaveTo="-translate-x-full"
                         >
-                            <p>sidebar</p>
-                            <p>sidebar</p>
-                            <p>sidebar</p>
-                            <p>sidebar</p>
-                            <p>sidebar</p>
-                            <p>sidebar</p>
-                            <p>sidebar</p>
-                            <p>sidebar</p>
-                            <p>sidebar</p>
-                            <p>sidebar</p>
-                            <p>sidebar</p>
-                            <p>sidebar</p>
-                            <p>sidebar</p>
-                            <button onClick={() => setSubShowing((subShowing) => !subShowing)}>
-                                Go to sub menu
-                            </button>
+                            {menuItems.map(item => (
+                                <a
+                                    className="w-full block h-24 my-4 cursor-pointer"
+                                    onClick={() => setSubShowing((subShowing) => !subShowing)}>
+                                    <img src={item.img} />
+                                </a>
+                            ))}
+
 
                         </Transition>
                         <Transition
